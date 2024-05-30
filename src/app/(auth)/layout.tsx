@@ -3,8 +3,6 @@ import type { Metadata } from 'next'
 import { Toaster } from '@/components/ui/toaster'
 import '../styles/globals.css'
 
-import { getAuthSession } from '@/lib/auth'
-
 export const metadata: Metadata = {
   title: 'blog background mangement',
   description: 'blog background mangement'
@@ -15,8 +13,6 @@ export default async function RootLayout ({
 }: {
   children: React.ReactNode
 }) {
-  const session = await getAuthSession()
-
   return (
     <html lang='en'>
       <body>

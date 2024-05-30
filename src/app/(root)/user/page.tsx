@@ -1,10 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import * as z from 'zod'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { UpdateUserValidation } from '@/lib/validations/user'
 import {
   Table,
   TableBody,
@@ -35,7 +31,6 @@ const UserPage = () => {
     hasPre: false,
     hasNext: false
   })
-  const [totalCount, setTotalCount] = useState(0)
   const [dialogDetails, setDialogDetails] = useState({
     open: false,
     id: ''
@@ -50,7 +45,6 @@ const UserPage = () => {
         data: { page: params.page, pageSize: params.pageSize }
       }).then(data => {
         setList(data.list)
-        setTotalCount(data.totalCount)
       })
     } catch (error) {}
   }, [params.page])
