@@ -6,8 +6,8 @@ import '../styles/globals.css'
 import { getAuthSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
-  title: 'exmgames background mangement',
-  description: 'exmgames background mangement'
+  title: 'blog background mangement',
+  description: 'blog background mangement'
 }
 
 export default async function RootLayout ({
