@@ -90,7 +90,7 @@ const UserPage = () => {
         </TableHeader>
         <TableBody>
           {(list || []).map((item: USER) => (
-            <TableRow key={item._id}>
+            <TableRow key={item.id}>
               <TableCell className='font-medium'>
                 {item?.image && (
                   <Image src={item.image} alt='' width={60} height={60} />
