@@ -7,29 +7,40 @@ export function cn(...inputs: ClassValue[]) {
 
 export const QuillModules = {
   toolbar: [
-    [{ header: [1, 2, false] }],
+    [
+      { header: "1" },
+      { header: "2" },
+      { font: [] },
+      { header: [1, 2, 3, 4, 5, 6, false] },
+    ],
     ["bold", "italic", "underline", "strike", "blockquote"],
+    [{ align: [] }],
     [
       { list: "ordered" },
       { list: "bullet" },
+      { list: "check" },
       { indent: "-1" },
       { indent: "+1" },
     ],
-    ["link", "image"],
+    [{ color: [] }, { background: [] }],
+    ["link", "image", "video"],
     ["clean"],
   ],
 };
 
 export const QuillFormats = [
   "header",
+  "font",
+  "size",
   "bold",
   "italic",
   "underline",
   "strike",
   "blockquote",
+  "align",
   "list",
-  "bullet",
   "indent",
   "link",
   "image",
+  "video",
 ];

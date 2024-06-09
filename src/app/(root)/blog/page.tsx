@@ -42,7 +42,7 @@ const BlogPage = () => {
         setTotalCount(data.totalCount)
       })
     } catch (error) {}
-  }, [params.page])
+  }, [params])
 
   return (
     <div>

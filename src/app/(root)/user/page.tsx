@@ -47,7 +47,7 @@ const UserPage = () => {
         setList(data.list)
       })
     } catch (error) {}
-  }, [params.page])
+  }, [params.page, params.pageSize])
 
   const handleDelete = async (id: string) => {
     // TODO: delete user

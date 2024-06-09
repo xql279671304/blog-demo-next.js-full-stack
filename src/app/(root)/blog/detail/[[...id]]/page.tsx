@@ -58,6 +58,7 @@ export default function BlogDetailPage () {
         form.reset({ name, image, brief, content })
       })
     }
+    // eslint-disable-next-line
   }, [id])
 
   return (

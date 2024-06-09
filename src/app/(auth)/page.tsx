@@ -4,7 +4,6 @@ import Link from 'next/link'
 import * as z from 'zod'
 import { signIn } from 'next-auth/react'
 import { useForm } from 'react-hook-form'
-import { useRouter } from 'next/navigation'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -17,12 +16,8 @@ import {
   FormMessage
 } from '@/components/ui/form'
 import { LoginValidation } from '@/lib/validations/user'
-import { useToast } from '@/components/ui/use-toast'
 
-const page = () => {
-  const router = useRouter()
-  const { toast } = useToast()
-
+const Page = () => {
   const form = useForm({
     resolver: zodResolver(LoginValidation),
     defaultValues: {
@@ -115,7 +110,7 @@ const page = () => {
             Sign in with Google
           </Button>
           <p>
-            If you don't have an account, please{' '}
+            If you don&apos;t have an account, please{' '}
             <Link href='/register' className='text-link'>
               Sign up
             </Link>
@@ -126,4 +121,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
